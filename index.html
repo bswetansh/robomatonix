@@ -25,9 +25,11 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
 </head>
 
 <body>
+  <div id="notification" class="notification hidden"></div>
   <div class="hero_area">
     <!-- header section strats -->
     <div class="hero_bg_box">
@@ -113,7 +115,7 @@
                       We empower students to explore the exciting world of robotics and technology
                     </p>
                     <div class="btn-box">
-                      <a href class="btn-1">Apply Now</a>
+                      <a href="contact.html" class="btn-1">Apply Now</a>
                     </div>
                   </div>
                 </div>
@@ -417,20 +419,20 @@
       <div class="">
         <div class="row">
           <div class="col-md-7 mx-auto">
-            <form action="#">
+            <form id="contact-form" action="#">
               <div class="contact_form-container">
                 <div>
                   <div>
-                    <input type="text" placeholder="Full Name" />
+                    <input type="text" name="name" placeholder="Full Name" />
                   </div>
                   <div>
-                    <input type="email" placeholder="Email " />
+                    <input type="email" name="email" placeholder="Email " />
                   </div>
                   <div>
-                    <input type="text" placeholder="Phone Number" />
+                    <input type="text" name="phone" placeholder="Phone Number" />
                   </div>
                   <div class="">
-                    <input type="text" placeholder="Message" class="message_input" />
+                    <input type="text"  name="message" placeholder="Message" class="message_input" />
                   </div>
                   <div class="btn-box ">
                     <button type="submit">
@@ -532,6 +534,47 @@
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/custom.js"></script>
+
+  <script>
+    // Initialize EmailJS
+    (function() {
+        emailjs.init('xgsgOKac8aiCVuOXr'); // Replace with your User ID
+    })();
+
+    // Handle form submission
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+        //Send the email
+        emailjs.sendForm('robomatonix-service', 'template_budw2gr', this)
+        .then(function() {
+            showNotification('Thanks for contacting us. We will reach out to you shortly.', 'success');
+        }, function(error) {
+            showNotification('Failed to send email. Error: ' + JSON.stringify(error), 'error');
+        });
+    });
+
+    function showNotification(message, type) {
+    const notification = document.getElementById('notification');
+    notification.textContent = message;
+
+    // Change background color based on type
+    if (type === 'success') {
+        notification.style.backgroundColor = '#4caf50'; // Green
+    } else {
+        notification.style.backgroundColor = '#f44336'; // Red
+    }
+
+    // Show notification
+    notification.classList.remove('hidden');
+    notification.classList.add('visible');
+
+    // Hide notification after 5 seconds
+    setTimeout(() => {
+        notification.classList.remove('visible');
+        notification.classList.add('hidden');
+    }, 5000);
+}
+</script>
 </body>
 
 </html>

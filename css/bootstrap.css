@@ -10035,4 +10035,28 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+
+.notification {
+  position: fixed;
+  top: 5%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for width and height */
+  padding: 15px;
+  background-color: #ffc107; /* Green for success */
+  color: white;
+  border-radius: 5px;
+  z-index: 1000;
+  transition: opacity 0.5s ease;
+  text-align: center; /* Center text */
+}
+
+.notification.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.notification.visible {
+  opacity: 1;
+  visibility: visible;
+}
 /*# sourceMappingURL=bootstrap.css.map */
