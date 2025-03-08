@@ -108,7 +108,7 @@
         <div class="col-md-4">
           <div class="box ">
             <div class="img-box">
-              <img src="images/roboticslab.jpg" width="300" height="200" style="border-radius: 15px;" alt="">
+              <img src="images/roboticslab.jpg" class="responsive-img" alt="Robotics Lab">
             </div>
             <div class="detail-box">
               <h6>
@@ -122,6 +122,24 @@
             </div>
           </div>
         </div>
+        <style>
+    .img-box {
+        text-align: center; /* Centers the image */
+    }
+
+    .responsive-img {
+        width: 100%; /* Makes image responsive */
+        height: auto; /* Maintains aspect ratio */
+        max-width: 300px; /* Ensures it doesn't get too large */
+        border-radius: 15px;
+    }
+
+    @media (max-width: 768px) {
+        .responsive-img {
+            max-width: 100%; /* Allows full-width scaling on small screens */
+        }
+    }
+</style>
         <div class="col-md-4">
           <div class="box ">
             <div class="img-box">
