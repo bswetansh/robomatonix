@@ -290,17 +290,13 @@
         flex-wrap: wrap;
     }
 
-    .row > .col-md-4:nth-child(-n+3) {
-        margin-bottom: 20px; /* Reduced gap between rows */
-    }
-
     .box {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: auto; /* Adjust height automatically */
-        max-height: 350px; /* Limits overall height */
-        padding: 10px; /* Reduced padding */
+        min-height: 280px; /* Ensures all content is visible */
+        max-height: 320px; /* Prevents excessive height */
+        padding: 8px; /* Reduced padding */
         background-color: #fff;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -310,23 +306,20 @@
         flex-grow: 1;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
+        text-align: center;
     }
 
     h6 {
         font-size: 1.1em; /* Slightly smaller font size */
         font-weight: bold;
-        text-align: center;
         margin: 5px 0; /* Reduced margin */
     }
 
     p {
-        flex-grow: 1;
-        display: flex;
-        align-items: center;
-        text-align: center;
         font-size: 0.9em; /* Slightly smaller text */
         margin: 5px 0; /* Reduced margin */
+        line-height: 1.2; /* Compact line spacing */
     }
 
     .img-box {
@@ -336,7 +329,7 @@
     .responsive-img {
         width: 100%;
         height: auto;
-        max-width: 250px; /* Reduced max image width */
+        max-width: 230px; /* Slightly smaller image */
         border-radius: 10px;
     }
 
@@ -346,6 +339,7 @@
         }
     }
 </style>
+
 
   <!-- end service section -->
 
