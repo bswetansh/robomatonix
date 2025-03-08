@@ -288,20 +288,33 @@
     .row {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center; /* Center align items */
+        justify-content: center;
+        align-items: stretch; /* Ensures equal height */
     }
 
     .box {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        min-height: 450px; /* Ensures text fits well */
-        max-height: 450px; /* Prevents excessive height */
-        padding: 15px; /* Keeps spacing clean */
+        width: 30%; /* Ensures consistent width */
+        min-height: 450px; /* Enough height for longer text */
+        padding: 15px;
         background-color: #fff;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: center;
+    }
+
+    .img-box {
+        width: 100%;
+        text-align: center;
+    }
+
+    .responsive-img {
+        width: 100%;
+        height: 200px; /* Fixed height for all images */
+        object-fit: cover; /* Ensures images fill the space evenly */
+        border-radius: 10px;
     }
 
     .detail-box {
@@ -312,31 +325,22 @@
     }
 
     h6 {
-        font-size: 1.2em; /* Keeping it bold and readable */
+        font-size: 1.2em; /* Keep headings uniform */
         font-weight: bold;
-        margin: 10px 0; /* Proper spacing */
+        margin: 15px 0; 
     }
 
     p {
-        font-size: 1em; /* Keeping text clear & readable */
+        font-size: 1em;
         margin: 10px 0;
-        line-height: 1.3; /* Balanced spacing */
+        line-height: 1.4;
+        flex-grow: 1; /* Makes sure shorter text areas expand */
     }
 
-    .img-box {
-        text-align: center;
-    }
-
-    .responsive-img {
-        width: 100%;
-        height: auto;
-        max-width: 300px; /* Ensures images are well-fitted */
-        border-radius: 10px;
-    }
-
+    /* Responsive adjustments */
     @media (max-width: 768px) {
-        .responsive-img {
-            max-width: 100%;
+        .box {
+            width: 90%; /* Full width on smaller screens */
         }
     }
 </style>
