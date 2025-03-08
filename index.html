@@ -290,15 +290,16 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: stretch; /* Ensures equal height */
+        gap: 20px;
     }
 
     .box {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 30%; /* Ensures consistent width */
-        min-height: 450px; /* Enough height for longer text */
-        padding: 15px;
+        width: 30%; /* Adjust width */
+        min-height: 500px; /* Keeps heights uniform */
+        padding: 20px;
         background-color: #fff;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -307,13 +308,16 @@
 
     .img-box {
         width: 100%;
-        text-align: center;
+        height: 200px; /* Fixed height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .responsive-img {
-        width: 100%;
-        height: 200px; /* Fixed height for all images */
-        object-fit: cover; /* Ensures images fill the space evenly */
+        width: 100%; /* Ensures full width */
+        height: 100%; /* Ensures full height */
+        object-fit: cover; /* Ensures images fill the space without distortion */
         border-radius: 10px;
     }
 
@@ -325,22 +329,22 @@
     }
 
     h6 {
-        font-size: 1.2em; /* Keep headings uniform */
+        font-size: 1.2em;
         font-weight: bold;
-        margin: 15px 0; 
+        margin: 15px 0;
     }
 
     p {
         font-size: 1em;
         margin: 10px 0;
         line-height: 1.4;
-        flex-grow: 1; /* Makes sure shorter text areas expand */
+        flex-grow: 1; /* Helps in equal height */
     }
 
-    /* Responsive adjustments */
+    /* Responsive Fix */
     @media (max-width: 768px) {
         .box {
-            width: 90%; /* Full width on smaller screens */
+            width: 90%;
         }
     }
 </style>
