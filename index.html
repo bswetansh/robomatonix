@@ -186,7 +186,15 @@
   <style>
     .move-left {
         position: relative;
-        left: -50px; /* Moves only the image to the left */
+        left: -50px; /* Moves the image left on larger screens */
+    }
+
+    /* Ensure the image remains properly visible on smaller screens */
+    @media (max-width: 768px) {
+        .move-left {
+            left: 0; /* Reset position for mobile devices */
+            width: 100%; /* Ensure it adapts to smaller screens */
+        }
     }
 </style>
 
