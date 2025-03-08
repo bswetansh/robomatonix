@@ -291,55 +291,58 @@
     }
 
     .row > .col-md-4:nth-child(-n+3) {
-        margin-bottom: 30px; /* Adds gap between rows */
+        margin-bottom: 20px; /* Reduced gap between rows */
     }
 
     .box {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 100%; /* Makes all boxes equal height */
-        padding: 15px;
+        height: auto; /* Adjust height automatically */
+        max-height: 350px; /* Limits overall height */
+        padding: 10px; /* Reduced padding */
         background-color: #fff;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .detail-box {
-        flex-grow: 1; /* Expands content to fill space */
+        flex-grow: 1;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
 
     h6 {
-        min-height: 50px; /* Ensures consistent title height */
-        font-size: 1.2em;
+        font-size: 1.1em; /* Slightly smaller font size */
         font-weight: bold;
         text-align: center;
+        margin: 5px 0; /* Reduced margin */
     }
 
     p {
-        flex-grow: 1; /* Makes text take up equal space */
+        flex-grow: 1;
         display: flex;
-        align-items: center; /* Centers text vertically */
+        align-items: center;
         text-align: center;
+        font-size: 0.9em; /* Slightly smaller text */
+        margin: 5px 0; /* Reduced margin */
     }
 
     .img-box {
-        text-align: center; /* Centers images */
+        text-align: center;
     }
 
     .responsive-img {
-        width: 100%; /* Makes image fully responsive */
-        height: auto; /* Maintains aspect ratio */
-        max-width: 300px; /* Limits max width to prevent oversized images */
-        border-radius: 15px;
+        width: 100%;
+        height: auto;
+        max-width: 250px; /* Reduced max image width */
+        border-radius: 10px;
     }
 
     @media (max-width: 768px) {
         .responsive-img {
-            max-width: 100%; /* Allows full-width scaling on small screens */
+            max-width: 100%;
         }
     }
 </style>
