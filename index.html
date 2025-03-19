@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <!-- Basic -->
@@ -15,77 +15,52 @@
 
   <title>ROBOMATONIX</title>
 
-  <!-- bootstrap core css -->
+  <!-- Bootstrap core CSS -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
-  <!-- fonts style -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
 
-  <!-- Custom styles for this template -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Custom styles -->
   <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
 </head>
 
 <body>
-  <div id="notification" class="notification hidden"></div>
-  <div class="hero_area">
-    <!-- header section strats -->
-    <div class="hero_bg_box">
-      <div class="img-box">
-        <img src="images/home3.jpg" alt="" style="width: 100%; height: auto;">
-      </div>
-    </div>
 
+  <div class="hero_area">
+    <!-- header section starts -->
     <header class="header_section">
       <div class="header_top">
         <div class="container-fluid">
-          <div class="contact_link-container">
-            <a href="" class="contact_link1">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <span>
-                iStart Nest, NH-21, Bharatpur, Rajasthan, 321001
-              </span>
-            </a>
-            <a href="" class="contact_link2">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-                Call : +91 7062847650
-              </span>
-            </a>
-            <a href="" class="contact_link3">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                robomatonix@gmail.com
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="header_bottom">
-        <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container">
-            <div class="img-box">
-              <img src="images/robo.jpg" width="200" height="75" style="border-radius: 15px;" alt="">
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""></span>
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+              <img src="images/robo.jpg" width="200" height="75" style="border-radius: 15px;" alt="Robomatonix">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
 
+            <!-- Navigation Menu -->
             <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
-              <ul class="navbar-nav  ">
+              <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                   <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html"> About</a>
+                  <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="program.html"> Programs </a>
+                  <a class="nav-link" href="program.html">Programs</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact us</a>
+                  <a class="nav-link" href="contact.html">Contact Us</a>
                 </li>
               </ul>
             </div>
@@ -93,6 +68,49 @@
         </div>
       </div>
     </header>
+    <!-- header section ends -->
+
+    <div class="hero_bg_box">
+      <div class="img-box">
+        <img src="images/home3.jpg" alt="" style="width: 100%; height: auto;">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap and JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+/* Header Styling */
+.header_top {
+    background-color: white !important; /* Change black header to white */
+    padding: 15px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for better visibility */
+}
+
+/* Navigation Menu */
+.navbar-nav .nav-link {
+    color: black !important; /* Menu text color */
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+/* Change Navbar Items on Hover */
+.navbar-nav .nav-link:hover {
+    color: #ff6600 !important; /* Change to orange when hovered */
+}
+
+/* Logo Styling */
+.navbar-brand img {
+    height: 60px; /* Adjust logo size */
+}
+
     <!-- end header section -->
     <!-- slider section -->
     <section class=" slider_section ">
