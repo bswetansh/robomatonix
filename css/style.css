@@ -314,6 +314,9 @@ custom_nav-container .navbar-toggler[aria-expanded="true"] {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: 1px solid transparent;
+  text-align: center;
+  white-space: nowrap;
+  width: 200px;
 }
 
 .slider_section .detail-box .btn-box .btn-1:hover {
