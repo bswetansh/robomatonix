@@ -31,6 +31,11 @@ body {
   padding-bottom: 90px;
 }
 
+.small-paragraph {
+  font-size: 15px; /* Adjust the font size as needed */
+  line-height: 1.5; /* Optional: Adjust line height for better readability */
+}
+
 .heading_container {
   display: -webkit-box;
   display: -ms-flexbox;
