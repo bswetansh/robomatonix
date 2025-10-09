@@ -275,7 +275,8 @@
       ],
       videos: [
         "https://youtube.com/shorts/VQYp4LrEABQ?si=rTdnyCl47lK-L7ge", // YouTube video link
-        "https://youtube.com/shorts/KPSCKqcaivA?si=My482RCDBOuCSO9N"
+        "https://youtube.com/shorts/KPSCKqcaivA?si=My482RCDBOuCSO9N",
+        "https://youtu.be/m3p_TD4_yWo?si=qwbxjEx91qBuWjzL"
       ]
     };
 
@@ -285,21 +286,34 @@
       const galleryImages = document.getElementById("galleryImages");
 
       // Load YouTube videos
-      galleryData.videos.forEach(video => {
-        const galleryItem = document.createElement("div");
-        galleryItem.classList.add("gallery_item");
-        const embedUrl = video.replace("watch?v=", "embed/"); // Convert YouTube URL to embed URL
-        galleryItem.innerHTML = `
-          <iframe 
-            width="100%" 
-            height="315" 
-            src="${embedUrl}" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>`;
-        galleryVideos.appendChild(galleryItem);
-      });
+    galleryData.videos.forEach(video => {
+      const galleryItem = document.createElement("div");
+      galleryItem.classList.add("gallery_item");
+    
+      let videoId = "";
+      if (video.includes("watch?v=")) {
+        videoId = video.split("watch?v=")[1].split("&")[0];
+      } else if (video.includes("shorts/")) {
+        videoId = video.split("shorts/")[1].split("?")[0];
+      } else if (video.includes("youtu.be/")) {
+        videoId = video.split("youtu.be/")[1].split("?")[0];
+      }
+    
+      const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+    
+      galleryItem.innerHTML = `
+        <iframe 
+          width="100%" 
+          height="315" 
+          src="${embedUrl}" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>`;
+    
+      galleryVideos.appendChild(galleryItem);
+    });
+
 
       // Load images
       galleryData.images.forEach(image => {
